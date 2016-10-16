@@ -28,4 +28,11 @@
         }
     })
 
+    // $('#fb').click(function() {
+    //     document.location = "fb://profile/1086625011361427";
+    //
+    //     setTimeOut(function() {
+    //         document.location = "https://www.facebook.com/veteranconnectco"
+    //     }, 300);
+    // })
 })(jQuery); // End of use strict
