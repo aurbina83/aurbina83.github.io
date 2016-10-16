@@ -50,13 +50,13 @@ p {
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: @theme-secondary;
     border-color: fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
         .heading-font;
-        color: @theme-primary;
+        color: white;
         &:hover,
         &:focus {
             color: darken(@theme-primary, 10%);
@@ -64,7 +64,7 @@ p {
     }
     .navbar-header .navbar-toggle {
         font-size: 12px;
-        color: @gray-darker;
+        color: white;
         padding: 8px 10px;
     }
     .nav {
@@ -110,10 +110,10 @@ p {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: @theme-secondary;
             border-color: fade(@gray-darker, 10%);
             .navbar-header .navbar-brand {
-                color: @gray-darker;
+                color: white;
                 &:hover,
                 &:focus {
                     color: @theme-primary;
@@ -121,7 +121,7 @@ p {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
+                color: white;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -137,9 +137,9 @@ header {
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
-    background: url("../img/bg-pattern.png"), @theme-secondary; /* fallback for old browsers */
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url("../img/bg-pattern2.png"), @theme-secondary; /* fallback for old browsers */
+    background: url("../img/bg-pattern2.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
+    background: url("../img/bg-pattern2.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     .header-content {
         text-align: center;
@@ -286,7 +286,7 @@ section.cta {
     position: relative;
     .background-cover;
     background-position: center;
-    background-image: url('../img/bg-cta.jpg');
+    background-image: url('https://s3.amazonaws.com/veteranconnect-assets/vcbg.png');
     padding: 250px 0;
     .cta-content {
         position: relative;
@@ -295,7 +295,7 @@ section.cta {
             margin-top: 0;
             margin-bottom: 25px;
             color: white;
-            max-width: 450px;
+            // max-width: 450px;
             font-size: 50px;
         }
         @media (min-width: 768px) {
@@ -307,7 +307,7 @@ section.cta {
     .overlay {
         height: 100%;
         width: 100%;
-        background-color: fade(black, 50%);
+        background-color: fade( #605757,20%);
         position: absolute;
         top: 0;
         left: 0;
@@ -457,4 +457,70 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @gray-darker;
+}
+
+/* --------------------------------------
+   Features
+   -------------------------------------- */
+        .content-section-a {
+    padding: 50px 0;
+    background-color: rgb(27, 67, 92);
+    color: white;
+
+    .section-heading-spacer {
+        float: left;
+        width: 100%;
+        border-top: 1px solid;
+        border-color: white;
+    }
+
+    .section-heading-spacer-bottom {
+        float: left;
+        width: 100%;
+        border-top: 1px solid;
+        border-color: white;
+    }
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+
+    .section-heading-spacer {
+        float: left;
+        width: 100%;
+        border-top: 1px solid;
+        border-color: #223140;
+    }
+
+    .section-heading-spacer-bottom {
+        float: left;
+        width: 100%;
+        border-top: 1px solid;
+        border-color: rgba(34, 49, 64, 0.55);
+    }
+}
+
+.section-heading {
+    // font-family: 'Oswald', sans-serif;
+    // font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.lead {
+    // font-family: 'Oswald', sans-serif;
+    // font-weight: 400;
+    font-size: 20px;
+}
+
+
+.img-responsive2 {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#sos {
+    max-width: 60%;
+    margin: 0 auto;
 }
