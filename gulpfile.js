@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var imagemin = require('gulp-imagemin');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -26,6 +27,13 @@ gulp.task('less', function() {
             stream: true
         }))
 });
+
+//Optimize images
+gulp.task('images', () =>
+    gulp.src('img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('img'))
+);
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
@@ -74,7 +82,7 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['less', 'images', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
