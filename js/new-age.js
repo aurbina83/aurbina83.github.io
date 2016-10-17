@@ -40,19 +40,17 @@
 
     $('#fb').click(function() {
 
-        if (navigator.appVersion.indexOf("Android") != -1) {
+        if (navigator.appVersion.indexOf("Android") != -1 || navigator.appVersion.indexOf("iPhone") != -1) {
             window.location = "fb://profile/1086625011361427";
 
             setTimeout(function() {
-                window.open("https://www.facebook.com/veteranconnectco", "_blank");
+                if(window.blur()) {
+                    return;
+                } else {
+                    window.open("https://www.facebook.com/veteranconnectco", "_blank");
+                }
             }, 3000);
-        } else if (navigator.appVersion.indexOf("iPhone") != -1) {
-            window.location = "fb://profile/1086625011361427";
-            
-            setTimeout(function() {
-                window.open("https://www.facebook.com/veteranconnectco", "_blank");
-            }, 3000);
-        } else {
+        }  else {
             window.open("https://www.facebook.com/veteranconnectco", "_blank");
         }
     })
