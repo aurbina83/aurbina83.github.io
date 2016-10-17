@@ -42,7 +42,7 @@
         window.location = "fb://profile/1086625011361427";
 
         setTimeout(function() {
-            window.open("https://www.facebook.com/veteranconnectco");
+            window.open("https://www.facebook.com/veteranconnectco", "_blank");
         }, 1000);
     })
 })(jQuery); // End of use strict
