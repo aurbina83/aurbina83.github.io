@@ -267,6 +267,7 @@ section.download {
     }
 
     .badges {
+        padding: 20px;
         .badge-link {
             display: block;
             margin-bottom: 25px;
@@ -399,6 +400,7 @@ section.contact {
                 font-size: 40px;
                 border-radius: 10px;
                 color: white;
+                margin: 5px;
             }
 
             &.social-twitter {
@@ -481,16 +483,17 @@ footer {
 // Button Styles
 .btn-outline {
     color: white;
-    border-color: white;
-    border: 1px solid;
+    border-color: @theme-primary;
+    background-color: @theme-primary;
+    border: 1px solid @theme-primary;
 
     &.active,
     &:active,
     &:focus,
     &:hover {
         color: white;
-        background-color: @theme-primary;
-        border-color: @theme-primary;
+        background-color: @theme-alt;
+        border-color: @theme-alt;
     }
 }
 

@@ -1,6 +1,16 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    // $('#dl-btn').click(function() {
+    //     if(navigator.appVersion.indexOf("Android") != -1) {
+    //         window.location = "http://www.google.com";
+    //     } else if (navigator.appVersion.indexOf("iPhone") != -1){
+    //         window.location = "http://www.apple.com";
+    //     } else {
+    //         return;
+    //     }
+    // });
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -28,11 +38,11 @@
         }
     })
 
-    // $('#fb').click(function() {
-    //     document.location = "fb://profile/1086625011361427";
-    //
-    //     setTimeOut(function() {
-    //         document.location = "https://www.facebook.com/veteranconnectco"
-    //     }, 300);
-    // })
+    $('#fb').click(function() {
+        window.location = "fb://profile/1086625011361427";
+
+        setTimeout(function() {
+            window.location = "https://www.facebook.com/veteranconnectco"
+        }, 25);
+    })
 })(jQuery); // End of use strict
