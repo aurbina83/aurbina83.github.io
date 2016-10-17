@@ -40,9 +40,9 @@
 
     $('#fb').click(function() {
         if (navigator.appVersion.indexOf("Android") != -1 || navigator.appVersion.indexOf("iPhone") != -1) {
-            window.location = "fb://profile/1086625011361427";
+            window.location = "http://m.facebook.com/veteranconnectco";
         }  else {
-            window.location = "https://www.facebook.com/veteranconnectco";
+            window.location = "http://www.facebook.com/veteranconnectco";
         }
     })
 })(jQuery); // End of use strict
