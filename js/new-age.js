@@ -38,11 +38,11 @@
         }
     })
 
-    // $('#fb').click(function() {
-    //     window.location = "fb://profile/1086625011361427";
-    //
-    //     setTimeout(function() {
-    //         window.open("https://www.facebook.com/veteranconnectco");
-    //     }, 1000);
-    // })
+    $('#fb').click(function() {
+        window.location = "fb://profile/1086625011361427";
+
+        setTimeout(function() {
+            window.open("https://www.facebook.com/veteranconnectco");
+        }, 1000);
+    })
 })(jQuery); // End of use strict
