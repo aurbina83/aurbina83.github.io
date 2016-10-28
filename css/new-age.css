@@ -384,6 +384,7 @@ section.contact ul.list-social li.social-facebook a {
 }
 section.contact ul.list-social li.social-facebook a:hover {
   background-color: #344e86;
+  cursor: pointer;
 }
 section.contact ul.list-social li.social-google-plus a {
   background-color: #dd4b39;

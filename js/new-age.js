@@ -1,15 +1,20 @@
 (function($) {
     "use strict"; // Start of use strict
 
-    // $('#dl-btn').click(function() {
-    //     if(navigator.appVersion.indexOf("Android") != -1) {
-    //         window.location = "http://www.google.com";
-    //     } else if (navigator.appVersion.indexOf("iPhone") != -1){
-    //         window.location = "http://www.apple.com";
-    //     } else {
-    //         return;
-    //     }
-    // });
+    console.log(navigator.userAgent);
+
+    var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    var android = /Android|android/.test(navigator.userAgent) && !window.MSStream;
+
+    $('#dl-btn').click(function() {
+        if(android) {
+            window.location = "market://details?id=com.veteranconnect.push";
+        } else if (ios){
+            window.location = "itms-app://itunes.apple.com/us/app/veteran-connect/id1161046543";
+        } else {
+            return;
+        }
+    });
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -38,8 +43,24 @@
         }
     })
 
+    $('#android').click(function(){
+        if(android) {
+            window.location = "market://details?id=com.veteranconnect.push";
+        } else {
+            window.location="https://play.google.com/store/apps/details?id=com.veteranconnect.push";
+        }
+    })
+
+    $('#ios').click(function(){
+        if(ios) {
+            window.location = "itms-app://itunes.apple.com/us/app/veteran-connect/id1161046543";
+        } else {
+            window.location = "https://itunes.apple.com/us/app/veteran-connect/id1161046543";
+        }
+    })
+
     $('#fb').click(function() {
-        if (navigator.appVersion.indexOf("Android") != -1 || navigator.appVersion.indexOf("iPhone") != -1) {
+        if (android || ios) {
             window.location = "http://m.facebook.com/veteranconnectco";
         }  else {
             window.location = "http://www.facebook.com/veteranconnectco";
