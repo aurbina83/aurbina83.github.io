@@ -10,7 +10,7 @@
         if(android) {
             window.location = "market://details?id=com.veteranconnect.push";
         } else if (ios){
-            window.location = "itms-app://itunes.apple.com/us/app/veteran-connect/id1161046543";
+            window.location = "itms-apps://itunes.apple.com/us/app/veteran-connect/id1161046543";
         } else {
             return;
         }
@@ -53,7 +53,7 @@
 
     $('#ios').click(function(){
         if(ios) {
-            window.location = "itms-app://itunes.apple.com/us/app/veteran-connect/id1161046543";
+            window.location = "itms-apps://itunes.apple.com/us/app/veteran-connect/id1161046543";
         } else {
             window.location = "https://itunes.apple.com/us/app/veteran-connect/id1161046543";
         }
