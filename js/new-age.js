@@ -8,7 +8,7 @@
 
     $('#dl-btn').click(function() {
         if(android) {
-            window.location = "market://details?id=com.veteranconnect.push";
+            window.location = "https://play.google.com/store/apps/details?id=com.veteranconnect.push";
         } else if (ios){
             window.location = "https://itunes.apple.com/us/app/veteran-connect/id1161046543?mt=8";
         } else {
@@ -42,15 +42,6 @@
             top: 50
         }
     })
-
-    $('#android').click(function(){
-        if(android) {
-            window.location = "market://details?id=com.veteranconnect.push";
-        } else {
-            window.location="https://play.google.com/store/apps/details?id=com.veteranconnect.push";
-        }
-    })
-
 
     $('#fb').click(function() {
         if (android || ios) {
